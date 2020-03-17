@@ -32,7 +32,7 @@ li {
 
 .btn {
   color: #fff;
-    background: rgb(138, 43, 138);
+    background:#555656;
     padding: 5px 10px;
     font-weight: 800;
     box-shadow: 2px 2px 3px grey;

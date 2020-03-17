@@ -23,24 +23,28 @@
       <div class="game-info--analysis">
         <h3>Analysis</h3>
 
-        <label for="ShotType">Shot Type </label>
-        <select v-model="shotSelected" name="ShotType">
-          <option value="All">All</option>
-          <option value="Slap Shot">Slap Shot</option>
-          <option value="Snap Shot">Snap Shot</option>
-          <option value="Wrist Shot">Wrist Shot</option>
-          <option value="Tip-In">Tip-In</option>
-          <option value="Backhand">Backhand</option>
-          <option value=">Deflected">Deflected</option>
-        </select>
-
-        <label for="Player">Player </label>
-        <select v-model="playerSelected" name="Player">
-          <option value="All" selected>All</option>
-          <option v-for="skater in skaters" :value="skater.fullName" :key="skater.fullName">
-            {{ skater.fullName }}
-          </option>
-        </select>
+        <div>
+          <label for="ShotType">Shot Type </label>
+          <select v-model="shotSelected" name="ShotType">
+            <option value="All">All</option>
+            <option value="Slap Shot">Slap Shot</option>
+            <option value="Snap Shot">Snap Shot</option>
+            <option value="Wrist Shot">Wrist Shot</option>
+            <option value="Tip-In">Tip-In</option>
+            <option value="Backhand">Backhand</option>
+            <option value=">Deflected">Deflected</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <label for="Player">Player </label>
+          <select v-model="playerSelected" name="Player">
+            <option value="All" selected>All</option>
+            <option v-for="skater in skaters" :value="skater.fullName" :key="skater.fullName">
+              {{ skater.fullName }}
+            </option>
+          </select>
+        </div>
       </div>
     </div>
     <div v-if="game">
